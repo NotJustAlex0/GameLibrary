@@ -16,11 +16,12 @@ class Program
             Console.WriteLine("2. Play Tic Tac Toe");
             Console.WriteLine("3. Play Rock Paper Scissors");
             Console.WriteLine("4. SnakeGame");
+            Console.WriteLine("5. Sokoban");
             Console.WriteLine("0. Exit");
             Console.Write("Enter your choice: ");
 
             string input = Console.ReadLine();
-            IGame game = null;
+            IGame game ;
 
             switch (input)
             {
@@ -35,6 +36,9 @@ class Program
                     break;
                 case "4":
                     game = new SnakeGame();
+                    break;
+                case "5":
+                    game = new SokobanGame();
                     break;
 
                 case "0":
